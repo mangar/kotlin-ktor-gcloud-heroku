@@ -1,0 +1,145 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+<<<<<<< HEAD
+apply plugin: 'war'
+//apply plugin: 'com.google.cloud.tools.appengine'
+=======
+>>>>>>> master
+apply plugin: 'application'
+//apply plugin: 'war'
+//apply plugin: 'kotlinx-serialization'
+
+group 'br.com.mangar'
+version '0.0.1'
+mainClassName = 'io.ktor.server.netty.DevelopmentEngine'
+
+sourceSets {
+    main.kotlin.srcDirs = main.java.srcDirs = ['src', 'main', 'kotlin']
+    test.kotlin.srcDirs = test.java.srcDirs = ['test']
+    main.resources.srcDirs = ['resources']
+    test.resources.srcDirs = ['testresources']
+}
+
+<<<<<<< HEAD
+jar {
+  baseName = 'panorama-dolar'
+  version = '1.0.0'
+  manifest {
+    attributes 'Main-Class': 'br.com.mangar.Application'
+  }
+}
+=======
+//jar {
+//  baseName = 'panorama-dolar'
+//  version = '1.0.0'
+//  manifest {
+//    attributes 'Main-Class': 'br.com.mangar.ApplicationKt'
+//  }
+//}
+>>>>>>> master
+
+repositories {
+    mavenLocal()
+    jcenter()
+    maven { url 'https://kotlin.bintray.com/ktor' }
+    maven { url 'https://kotlin.bintray.com/kotlin-js-wrappers' }
+}
+
+dependencies {
+    // kotlin
+<<<<<<< HEAD
+    // compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    compile "org.jetbrains:kotlin-css-jvm:1.0.0-pre.31-kotlin-1.2.41"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.13.0"
+
+    //ktor
+    // compile "io.ktor:ktor-server-netty:$ktor_version"
+    compile "io.ktor:ktor-server-core:$ktor_version"
+    compile "io.ktor:ktor-html-builder:$ktor_version"
+    compile "io.ktor:ktor-client-core:$ktor_version"
+    compile "io.ktor:ktor-client-core-jvm:$ktor_version"
+    compile "io.ktor:ktor-client-apache:$ktor_version"
+    // compile "io.ktor:ktor-freemarker:$ktor_version"
+    compile "io.ktor:ktor-auth:$ktor_version"
+    // compile "io.ktor:ktor-locations:$ktor_version"
+    compile "io.ktor:ktor-server-servlet:$ktor_version"
+
+    // compile "ch.qos.logback:logback-classic:$logback_version"
+
+=======
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+//    compile "org.jetbrains:kotlin-css-jvm:1.0.0-pre.31-kotlin-1.2.41"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.13.0"
+
+    //ktor
+    compile "io.ktor:ktor-server-netty:$ktor_version"
+//    compile "io.ktor:ktor-server-core:$ktor_version"
+//    compile "io.ktor:ktor-html-builder:$ktor_version"
+//    compile "io.ktor:ktor-client-core:$ktor_version"
+//    compile "io.ktor:ktor-client-core-jvm:$ktor_version"
+//    compile "io.ktor:ktor-client-apache:$ktor_version"
+    compile "io.ktor:ktor-freemarker:$ktor_version"
+//    compile "io.ktor:ktor-auth:$ktor_version"
+    compile "io.ktor:ktor-locations:$ktor_version"
+    compile "io.ktor:ktor-server-servlet:$ktor_version"
+
+    compile "ch.qos.logback:logback-classic:$logback_version"
+
+
+    // GAE
+//    providedCompile "com.google.appengine:appengine:$appengine_version"
+>>>>>>> master
+
+    // Google
+//    compile 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+//    compile 'com.google.auth:google-auth-library-oauth2-http:0.17.1'
+//    compile 'com.google.api-client:google-api-client:1.30.2'
+//    compile 'com.google.apis:google-api-services-sheets:v4-rev516-1.23.0'
+//    compile 'com.google.apis:google-api-services-drive:v3-rev165-1.25.0'
+//    compile 'com.google.appengine:appengine-api-1.0-sdk:1.9.76'
+
+    // DB
+<<<<<<< HEAD
+    // compile "org.jetbrains.exposed:exposed:$exposed_version"
+    // compile "org.postgresql:postgresql:$postgres_version"
+    // compile "com.zaxxer:HikariCP:$hikaricp_version"
+=======
+//    compile "org.jetbrains.exposed:exposed:$exposed_version"
+//    compile "org.postgresql:postgresql:$postgres_version"
+//    compile "com.zaxxer:HikariCP:$hikaricp_version"
+
+>>>>>>> master
+
+
+//    testCompile "io.ktor:ktor-server-tests:$ktor_version"
+}
+
+task stage {
+  dependsOn installDist
+}
+
+<<<<<<< HEAD
+task stage(dependsOn: ['build', 'clean', 'installDist'])
+
+
+=======
+>>>>>>> master
+
+//task stage(dependsOn: ['installDist'])
+
+//task stage {
+//  dependsOn installDist
+//}
+
+//kotlin.experimental.coroutines = 'enable'
