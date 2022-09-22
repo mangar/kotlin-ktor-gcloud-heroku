@@ -13,7 +13,7 @@
     <exposed.version>0.17.5</exposed.version>
 <!--    <postgres.version>42.2.8</postgres.version>-->
 <!--    <postgres.version>9.4-1201-jdbc4</postgres.version>-->
-    <postgres.version>9.4.1211</postgres.version>
+    <postgres.version>42.3.7</postgres.version>
     <hikaricp.version>3.3.1</hikaricp.version>
     <exposed.version>0.17.5</exposed.version>
   </properties>
